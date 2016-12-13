@@ -3,7 +3,7 @@
 require('!!file?name=[name].[ext]!./html/index.html');
 
 let React = require('react');
-let ReactDOM = require('react-DOM');
+let ReactDOM = require('react-dom');
 
 let Hello = React.createClass({
   render: function() {
