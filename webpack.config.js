@@ -6,14 +6,24 @@ const ExtractText = require('extract-text-webpack-plugin');
 
 const apiURL = process.env.API_URL || 'http://localhost:3000';
 
-let plugins = [
+let plugins = process.env.NODE_ENV === 'production' ?
+  [ new ExtractText('bundle.css', {
+    allChunks: true
+  }),
+  new webpack.DefinePlugin({
+    __API_URL__: JSON.stringify(apiURL)
+  }),
+  new webpack.optimize.DedupePlugin(),
+  new webpack.optimize.OccurenceOrderPlugin(),
+  new webpack.optimize.UglifyJsPlugin()
+] : 
+[ 
   new ExtractText('bundle.css', {
     allChunks: true
   }),
   new webpack.DefinePlugin({
     __API_URL__: JSON.stringify(apiURL)
-  })
-];
+  })]
 
 module.exports = {
   entry: './app/entry.js',
