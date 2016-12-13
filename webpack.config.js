@@ -7,7 +7,9 @@ const ExtractText = require('extract-text-webpack-plugin');
 const apiURL = process.env.API_URL || 'http://localhost:3000';
 
 let plugins = [
-  new ExtractText('bundle.css'),
+  new ExtractText('bundle.css', {
+    allChunks: true
+  }),
   new webpack.DefinePlugin({
     __API_URL__: JSON.stringify(apiURL)
   })
