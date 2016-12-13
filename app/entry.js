@@ -10,9 +10,10 @@ import About from './components/About';
 
 render((
   <Router history={hashHistory}>
-    <Route path='/' component={App} />
+    <Route path="/" component={App}>
     <Route path="/home" component={Home} />
     <Route path="/about" component={About}/>
+    </Route>
   </Router>
   
 ), document.getElementById('app'))

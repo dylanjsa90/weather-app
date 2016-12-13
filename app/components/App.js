@@ -9,9 +9,10 @@ export default React.createClass({
       <div>
         <h1>React Router Practice</h1>
         <ul role="nav" id="navbar">
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
+          <li><Link to="/home" activeStyle={{color: 'Red' }}>Home</Link></li>
+          <li><Link to="/about" activeStyle={{color: 'red' }}>About</Link></li>
         </ul>
+        {this.props.children}
       </div>
     )
   }
