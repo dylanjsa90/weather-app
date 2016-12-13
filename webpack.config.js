@@ -20,6 +20,7 @@ module.exports = {
   output: {
     path: 'build',
     filename: 'bundle.js',
+    publicPath: '/'
   },
   plugins: plugins,
   sassLoader: {
