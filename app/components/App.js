@@ -2,6 +2,8 @@
 
 import React from 'react'
 import NavLink from './NavLink'
+import Home from './Home'
+import { IndexLink } from 'react-router'
 
 export default React.createClass({
   render() {
@@ -9,11 +11,11 @@ export default React.createClass({
       <div>
         <h1>React Router Practice</h1>
         <ul role="nav" id="navbar">
-          <li><NavLink to="/home">Home</NavLink></li>
+          <li><NavLink to="/" onlyActiveOnIndex={true}>Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/repos">Repos</NavLink></li>
         </ul>
-        {this.props.children}
+        {this.props.children || <Home />}
       </div>
     )
   }

@@ -4,7 +4,7 @@ require('./scss/base.scss');
 
 import React from 'react';
 import { render } from 'react-dom'
-import {Router, Route, hashHistory} from 'react-router';
+import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 import App from './components/App';
 import Home from './components/Home';
 import About from './components/About';
@@ -12,9 +12,9 @@ import Repo from './components/Repo';
 import Repos from './components/Repos';
 
 render((
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <Route path="/home" component={Home} />
+      <IndexRoute component={Home}/>
       <Route path="/repos" component={Repos}>
         <Route path="/repos/:userName/:repoName" component={Repo}/>
       </Route>
