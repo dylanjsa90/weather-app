@@ -2,9 +2,12 @@
 import React from 'react';
 
 export default React.createClass({
-  render: function() {
+  render() {
     return (
-      <div className="main-container">Home</div>
+      <div className="main-container">
+        <h2>Home</h2>
+
+      </div>
     )
   }
 });

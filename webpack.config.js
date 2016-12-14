@@ -55,6 +55,9 @@ module.exports = {
         loader: 'html'
       },
       {
+        test: /\.json$/, loader: 'json-loader'
+      },
+      {
         test: /\.(jpg|gif|png)$/,
         loader: 'file?name=img/[hash].[ext]',
       },
@@ -67,5 +70,11 @@ module.exports = {
         loader: 'file?name=fonts/[name].[ext]',
       },
     ]
+  },
+  node: {
+    console: true,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
   }
 };

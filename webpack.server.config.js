@@ -20,12 +20,22 @@ module.exports = {
 
   node: {
     __filename: true,
-    __dirname: true
+    __dirname: true,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
+    console: 'empty'
   },
 
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react'}
+      { test: /\.js$/, exclude: /node_modules/, 
+        loader: 'babel-loader?presets[]=es2015&presets[]=react'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      }
     ]
   }
 }
