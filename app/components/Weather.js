@@ -28,9 +28,7 @@ export default React.createClass({
     return (
     <div>
       <ul>
-        <li><NavLink to="/weather/city">Search By City</NavLink></li>
-        <li><NavLink to="/weather/zip">Search By Zip</NavLink></li>
-        <li><NavLink to="/weather/latlng">Search By Coordinates</NavLink></li>
+
         <li>
           <h2>Search By City</h2>
           <form onSubmit={this.handleSubmit}>

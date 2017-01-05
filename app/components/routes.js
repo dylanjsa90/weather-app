@@ -7,6 +7,7 @@ import About from './About'
 import Weather from './Weather';
 import City from './City'
 import Zip from './Zip'
+import Contact from './Contact'
 import Home from './Home'
 
 module.exports = (
@@ -16,6 +17,7 @@ module.exports = (
       <Route path="/weather/city/:city" component={City}/>
       <Route path="/weather/zip/:zip" component={Zip}/>
     </Route>
+    <Route path="/contact" component={Contact}/>
     <Route path="/about" component={About}/>
   </Route> 
 )

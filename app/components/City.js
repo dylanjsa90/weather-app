@@ -21,7 +21,7 @@ export default React.createClass({
       <div>
         <h2>Results from City search {this.props.params.city}</h2>
         <ul>
-          <li>Main Temp in K {data.main}</li>
+          <li>Main Temp in K {data.weather[0].main}</li>
         </ul>
       </div>
     )
